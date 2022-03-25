@@ -32,8 +32,8 @@ get_keypoints = lambda pose_layers: map(itemgetter(1, 3), [cv2.minMaxLoc(pose_la
 
 while True:
 
-    _, original_image = cam.read()
-    # original_image = cv2.imread("img/steffigraf.jpg")
+    # _, original_image = cam.read()
+    original_image = cv2.imread("img/steffigraf.jpg")
     image = cv2.resize(original_image, (384, 384), interpolation=cv2.INTER_NEAREST)
 
     # normalize image for inference
